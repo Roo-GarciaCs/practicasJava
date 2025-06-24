@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Calificaciones {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Calificación del alumno: ");
+        float calificacion = scanner.nextFloat();
+
+        if (calificacion >= 7.0 && calificacion <= 10.0 ) {
+            System.out.println("El estudiante obtuvo de calificación: " + calificacion + " y fue aprobado");
+                 } else if (calificacion >= 5.0 && calificacion < 7.0) {
+            System.out.println("El alumno obtuvo de calificación " + calificacion + " y está en recuperación");
+                } else if (calificacion >= 0  && calificacion < 5) {
+                        System.out.println("El estudiante obtuvo de:" + calificacion + " y está reprobado");
+            } else {
+                System.out.println("Ingresa una calificación válida");
+            }
+        }
+    }
