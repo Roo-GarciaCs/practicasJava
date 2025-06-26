@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Descuento {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Valor de la compra : ");
+        float compra = scanner.nextFloat();
+
+        if (compra >= 100) {
+            System.out.println("Descuento del 10% aplicado");
+            float descuento =  (compra * 0.10f);
+            System.out.println("Nuevo valor: $ " + (compra - descuento));
+        } else {
+            System.out.println("Descuento no aplicado");
+            System.out.println("Valor total : $ " + compra);
+        }
+        scanner.close();
+    }
+}
