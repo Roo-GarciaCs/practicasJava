@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class VerificarPrestamo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese el valor solicitado para el préstamo: ");
+        int valor = scanner.nextInt();
+
+        if (valor >= 1000 && valor <= 5000) {
+            System.out.println("El valor está dentro del intervalo permitido para el préstamo.");
+        } else {
+            System.out.println("El valor " + valor + " está fuera del intervalo permitido.");
+        }
+
+        scanner.close();
+    }
+}
