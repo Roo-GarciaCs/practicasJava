@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Triangulo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el primer lado: ");
+        double ladoa = scanner.nextDouble();
+
+        System.out.print("Ingresa el segundo lado: ");
+        double ladob = scanner.nextDouble();
+
+        System.out.print("Ingresa el tercer lado: ");
+        double ladoc = scanner.nextDouble();
+
+        if (ladoa + ladob > ladoc && ladoa + ladoc > ladob && ladob + ladoc > ladoa) {
+            System.out.println("¡Los lados pueden formar un triángulo!");
+        } else {
+            System.out.println("Los lados NO pueden formar un triángulo.");
+        }
+
+        scanner.close();
+    }
+}
