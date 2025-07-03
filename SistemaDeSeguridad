@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class SistemaSeguridad {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Ingrese el código de acceso: ");
+        int codigo = scanner.nextInt();
+        
+        System.out.print("Ingrese el nivel de permiso: ");
+        int nivel = scanner.nextInt();
+
+        boolean codigoCorrecto = (codigo == 2023);
+        boolean nivelValido = (nivel == 1 || nivel == 2 || nivel == 3);
+
+        if (codigoCorrecto && nivelValido) {
+            System.out.println("Acceso permitido. Bienvenido al sistema!");
+        } else {
+            System.out.println("Acceso denegado.");
+            if (!codigoCorrecto && !nivelValido) {
+                System.out.println("Motivo: Código incorrecto y nivel de permiso inválido.");
+            } else if (!codigoCorrecto) {
+                System.out.println("Motivo: Código incorrecto.");
+            } else if (!nivelValido) {
+                System.out.println("Motivo: Nivel de permiso inválido.");
+            }
+        }
+
+        scanner.close();
+    }
+}
